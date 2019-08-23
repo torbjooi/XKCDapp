@@ -42,6 +42,7 @@ class MainActivity : AppCompatActivity() {
         // Takes an urlString and displays it to imageView using Glide.
 
 
+
         val imageView = findViewById<View>(R.id.imageView) as ImageView
 
 
@@ -49,6 +50,7 @@ class MainActivity : AppCompatActivity() {
             .load(url)
             .override(1000,1000)
             .into(imageView)
+
     }
 
 
@@ -71,7 +73,6 @@ class MainActivity : AppCompatActivity() {
 
         displayComic(url)
 
-        Toast.makeText(applicationContext, lastComicNr.toString(), Toast.LENGTH_SHORT).show()
 
     }
 
@@ -92,7 +93,6 @@ class MainActivity : AppCompatActivity() {
 
 
         displayComic(url)
-        Toast.makeText(applicationContext, index.toString(), Toast.LENGTH_SHORT).show()
 
     }
 
@@ -138,6 +138,4 @@ class MainActivity : AppCompatActivity() {
         displayComic(url)
 
     }
-
-
 }
