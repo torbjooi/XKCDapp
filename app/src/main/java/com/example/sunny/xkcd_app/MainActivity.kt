@@ -32,7 +32,7 @@ class MainActivity : AppCompatActivity() {
         val getURL = GetWebAPI()
         lastComicNr = Integer.parseInt(getURL.execute(-1).get())
 
-        displayComic("https://imgs.xkcd.com/comics/e_scooters.png")
+        displayLast()
 
 
     }
@@ -128,6 +128,14 @@ class MainActivity : AppCompatActivity() {
         editText?.setText(Integer.toString(index))
         displayComic(url)
 
+
+    }
+
+    fun displayLast(){ // Displays the last comic.
+        val getURL = GetWebAPI()
+        val url = getURL.execute(lastComicNr).get()
+        index = lastComicNr
+        displayComic(url)
 
     }
 
