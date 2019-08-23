@@ -47,7 +47,7 @@ class MainActivity : AppCompatActivity() {
 
         Glide.with(this)
             .load(url)
-            .override(500,500)
+            .override(1000,1000)
             .into(imageView)
     }
 
